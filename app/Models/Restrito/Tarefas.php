@@ -4,12 +4,10 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Tarefas extends Model implements AuditableContract {
+class Tarefas extends Model
+{
 
-    use Auditable;
     use SoftDeletes;
 
     protected $table = 'tarefas';
@@ -46,5 +44,4 @@ class Tarefas extends Model implements AuditableContract {
         'TAR_APVCLIENTE_VALOR' => 'required|max:3',
         'TAR_APVCLIENTE_TAREFA' => 'required|max:3',
     ];
-
 }

@@ -4,22 +4,21 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Posts extends Model implements AuditableContract {
+class Posts extends Model {
 
-    use Auditable;
     use SoftDeletes;
 
     protected $table = 'posts';
     protected $primaryKey = 'POST_CODIGO';
+    
     protected $fillable = [
         'SUBCAT_CODIGO',
         'user_id',
         'POST_CODIGO_CORRELATA',
         'POST_RETRANCA',
         'POST_TITULO',
+        'POST_TITULOCHAMADA',
         'POST_SUBTITULO',
         'POST_SLUG',
         'POST_STATUS',
@@ -31,12 +30,14 @@ class Posts extends Model implements AuditableContract {
         'POST_IMAGE_CREDITO',
         'POST_VIDEO',
         ];
+    
     public $rules = [
         'SUBCAT_CODIGO' => 'required|numeric',
         'user_id' => 'required|numeric',
         'POST_CODIGO_CORRELATA' => 'numeric',
         'POST_RETRANCA' => 'max:60',
         'POST_TITULO' => 'required|max:180',
+        'POST_TITULOCHAMADA' => 'required|max:180',
         'POST_SUBTITULO' => 'max:256',
         'POST_SLUG' => 'required|max:256',
         'POST_STATUS' => 'required|max:15',

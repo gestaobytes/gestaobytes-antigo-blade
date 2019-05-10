@@ -4,12 +4,10 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Tickets extends Model implements AuditableContract {
+class Tickets extends Model
+{
 
-    use Auditable;
     use SoftDeletes;
 
     protected $table = 'tickets';
@@ -30,5 +28,4 @@ class Tickets extends Model implements AuditableContract {
         'TICK_PRIORIDADE' => 'required|max:15',
         'TICK_STATUS' => 'required|max:15',
     ];
-
 }

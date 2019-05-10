@@ -11,7 +11,7 @@ class Permissions extends Seeder {
                 [
                     'id' => 1,
                     'name' => 'SUPERADMIN',
-                    'label' => 'Perfil implantador BemFuncional',
+                    'label' => 'Perfil implantador Gestão Bytes',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ],

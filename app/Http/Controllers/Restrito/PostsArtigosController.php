@@ -57,6 +57,7 @@ class PostsArtigosController extends StandardController {
         if (Gate::denies("$gate")) {
             abort(403, 'Não Autorizado!');
         }
+        
         $subcategorias = $this->subcategorias
                 ->leftJoin('categorias', 'categorias.CAT_CODIGO', 'subcategorias.CAT_CODIGO')
                 ->where('SUBCAT_CODIGO', '>', 1)
@@ -65,7 +66,7 @@ class PostsArtigosController extends StandardController {
         return view("{$this->nomeView}.cadastrar-editar", compact('subcategorias'))
                         ->with('page', $this->page)
                         ->with('titulo', $this->titulo);
-    }
+    } 
 
     public function editar($id) {
         $gate = $this->gate;

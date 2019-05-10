@@ -4,12 +4,9 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Role extends Model  implements AuditableContract
+class Role extends Model  
 {
-    use Auditable;
     use SoftDeletes;
 
     protected $table = 'roles';
@@ -21,7 +18,7 @@ class Role extends Model  implements AuditableContract
     ];
 
     public function permissions() {
-        return $this->belongsToMany(\App\Models\Restrito\Permission::class);
+        return $this->belongsToMany(Permission::class);
     }
 
 }

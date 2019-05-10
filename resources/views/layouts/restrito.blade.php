@@ -18,7 +18,7 @@
         <meta name='apple-mobile-web-app-capable' content='yes'/>
         <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'/>
 
-        <title>BemFuncional </title>
+        <title>Gestão Bytes </title>
         <link rel='stylesheet' href='{{url('assets/restrito/bower_components/bootstrap/dist/css/bootstrap.min.css')}}'/>
         <link rel='stylesheet' href='{{url('assets/restrito/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css')}}'/>
         <link rel='stylesheet' href='{{url('assets/restrito/bower_components/animate.css/animate.min.css')}}'/>
@@ -37,7 +37,7 @@
         @stack('css')
         @stack('js-topo')
 
-        <script> window.bemfuncional = <?php echo json_encode(['csrfToken' => csrf_token(),]); ?></script>
+        <script> window.gestaobytes = <?php echo json_encode(['csrfToken' => csrf_token(),]); ?></script>
 
         <!--[if lt IE 9]>
           <script src='{{url('assets/restrito/bower_components/html5shiv/dist/html5shiv.min.js')}}'></script>
@@ -57,12 +57,12 @@
             <nav class='navbar'>
                 <div class='navbar-header container'>
                     <a href='#' class='menu-toggle'><i class='zmdi zmdi-menu'></i></a>
-                    <a href='{{url('/')}}' class='logo'><img src='{{url('assets/restrito/img/logo.png')}}' alt='BemFuncional'></a>
+                    <a href='{{url('/')}}' class='logo'><img src='{{url('assets/restrito/img/logo.png')}}' alt='Gestão Bytes'></a>
                     <a href='{{url('/')}}' class='icon-logo'></a>
                 </div>
                 <div class='navbar-container clearfix'>
                     <div class='pull-left'>
-                        <a href='{{url('/')}}' class='page-title text-uppercase'>BemFuncional | {{Auth::user()->name}}</a>
+                        <a href='{{url('/')}}' class='page-title text-uppercase'>Gestão Bytes | {{Auth::user()->name}}</a>
                     </div>
 
                     <div class='pull-right'>
@@ -160,10 +160,10 @@
                             <li class='inside-title'>Financeiro</li>
                             <li class='menu-child'>
                                 <a aria-expanded='false' href='#'><i class='zmdi zmdi-email'></i>
-                                    BemFuncional<span class='zmdi arrow'></span>
+                                    Gestão Bytes<span class='zmdi arrow'></span>
                                 </a>
                                 <ul aria-expanded='false' class='nav nav-inside collapse'>
-                                    <li class='inside-title'>BemFuncional</li>
+                                    <li class='inside-title'>Gestão Bytes</li>
                                     <li><p class='m-t-15 m-l-20 f-s-16' style='color: #546e7a'>Débitos</p></li>
                                     <li><a href='{{url('restrito/despesas/categorias')}}'>Categorias</a></li>
                                     <li><a href='{{url('restrito/despesas')}}'>Despesas</a></li>

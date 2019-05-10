@@ -4,17 +4,15 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Categorias extends Model implements AuditableContract {
-
-    use Auditable;
+class Categorias extends Model {
+    
     use SoftDeletes;
 
     protected $table = 'categorias';
     protected $primaryKey = 'CAT_CODIGO';
     protected $fillable = ['CAT_TIPO', 'CAT_TITULO', 'CAT_SLUG', 'CAT_ICONE', 'CAT_DESCRICAO', 'CAT_CORTOPO', 'CAT_CORFONTETOPO', 'CAT_LINKTOPO', 'CAT_LINKFOOTER'];
+    
     public $rules = [
         'CAT_TIPO' => 'required|max:1',
         'CAT_TITULO' => 'required|min:4|max:50|unique:categorias,CAT_TITULO,((ID{?})),CAT_CODIGO',

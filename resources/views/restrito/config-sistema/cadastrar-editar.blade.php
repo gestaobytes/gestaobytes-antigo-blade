@@ -93,14 +93,14 @@
         </div>
         <div class='row m-t-20'>
             <div class='input-field col-md-6'>
-                <label>CHAVE FORNECIDA PELA BEMFUNCIONAL</label>
+                <label>CHAVE FORNECIDA PELA GESTÃO BYTES</label>
                 {!! Form::text('CONFIG_API', null, ['required' => 'yes', 'maxlength' => '255', 'class' => 'form-control']) !!}
                 @if ($errors->has('CONFIG_API'))
                 <span class='text-danger'> {{ $errors->first('CONFIG_API') }} </span>
                 @endif
             </div>
             <div class='input-field col-md-6'>
-                <label>SENHA FORNECIDA PELA BEMFUNCIONAL</label>
+                <label>SENHA FORNECIDA PELA GESTÃO BYTES</label>
                 {!! Form::text('CONFIG_SENHA', null, ['required' => 'yes', 'maxlength' => '255', 'class' => 'form-control']) !!}
                 @if ($errors->has('CONFIG_SENHA'))
                 <span class='text-danger'> {{ $errors->first('CONFIG_SENHA') }} </span>

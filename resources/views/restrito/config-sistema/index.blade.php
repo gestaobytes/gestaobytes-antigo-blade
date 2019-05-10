@@ -61,7 +61,7 @@
             <table class='display datatable'>
                 <tr>
                     <td class='p-10'>
-                        <strong>CHAVE BEMFUNCIONAL</strong> <br/>
+                        <strong>CHAVE GESTÃO BYTES</strong> <br/>
                         {{$registro->CONFIG_EJORNAL_API}}
                     </td>
                 </tr>

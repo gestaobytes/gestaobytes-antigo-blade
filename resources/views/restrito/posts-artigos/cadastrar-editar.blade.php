@@ -36,22 +36,7 @@
             <span class='text-danger'> {{ $errors->first('POS_CODIGO') }} </span>
             @endif
         </div>
-        <div class='input-field col-md-4'>
-            <label>CORRELATA</label>
-            <select name='POST_CODIGO_CORRELATA' class="form-control" autocomplete="yes" >
-                <option></option>
-                @foreach($correlatas as $correlata)
-                <option
-                    @if(isset($data->POST_CODIGO_CORRELATA) && ($data->POST_CODIGO_CORRELATA==$correlata->POST_CODIGO)) @php echo 'selected'; @endphp @endif
-                    value="{{$correlata->POST_CODIGO}}" >
-                    {{$correlata->POST_TITULO}}
-            </option>
-            @endforeach
-        </select>
-        @if ($errors->has('POS_CODIGO'))
-        <span class='text-danger'> {{ $errors->first('POS_CODIGO') }} </span>
-        @endif
-    </div>
+       
     <div class='input-field col-md-4'>
         <label>RETRANCA</label>
         {!! Form::text('POST_RETRANCA', null, ['maxlength' => '60', 'class' => 'form-control']) !!}

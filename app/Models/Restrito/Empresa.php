@@ -4,19 +4,18 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class Empresa extends Model  implements AuditableContract
+class Empresa extends Model
 {
-    use Auditable;
+
     use SoftDeletes;
 
     protected $table = 'empresas';
     protected $primaryKey = 'EMPR_CODIGO';
     protected $fillable = [
-        'EMPR_NOMEFANTASIA', 'EMPR_RAZAOSOCIAL', 'EMPR_INSCRICAOMUNICIPAL', 'EMPR_INSCRICAOESTADUAL', 'EMPR_CNPJ', 'EMPR_ENDERECO', 'EMPR_CIDADE', 'EMPR_UF', 'EMPR_CEP', 'EMPR_FONE1','EMPR_FONE2','EMPR_LOGO',
+        'EMPR_NOMEFANTASIA', 'EMPR_RAZAOSOCIAL', 'EMPR_INSCRICAOMUNICIPAL', 'EMPR_INSCRICAOESTADUAL', 'EMPR_CNPJ', 'EMPR_ENDERECO', 'EMPR_CIDADE', 'EMPR_UF', 'EMPR_CEP', 'EMPR_FONE1', 'EMPR_FONE2', 'EMPR_LOGO',
     ];
+
     public $rules = [
         'EMPR_NOMEFANTASIA' => 'required|max:200',
         'EMPR_RAZAOSOCIAL' => 'required|max:200',
@@ -31,5 +30,4 @@ class Empresa extends Model  implements AuditableContract
         'EMPR_FONE2' => 'max:15',
         'EMPR_LOGO' => 'max:50',
     ];
-
 }

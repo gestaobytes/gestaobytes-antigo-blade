@@ -19,8 +19,8 @@ class SubCategorias extends Seeder {
                 [
                     'SUBCAT_CODIGO' => 2,
                     'CAT_CODIGO' => 2,
-                    'SUBCAT_TITULO' => 'BemFuncional',
-                    'SUBCAT_SLUG' => 'bem-funcional',
+                    'SUBCAT_TITULO' => 'Gestão Bytes',
+                    'SUBCAT_SLUG' => 'gestao-bytes',
                     'SUBCAT_DESCRICAO' => 'Blog principal da empresa.',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),

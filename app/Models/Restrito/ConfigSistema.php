@@ -4,20 +4,19 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
-class ConfigSistema extends Model  implements AuditableContract
+class ConfigSistema extends Model
 {
-    use Auditable;
+
     use SoftDeletes;
 
     protected $table = 'configuracoes';
     protected $primaryKey = 'CONFIG_CODIGO';
     protected $fillable = [
-        'CONFIG_NOMESITE', 'CONFIG_LOGOTOPO','CONFIG_LOGORODAPE', 'CONFIG_FAVICON', 'CONFIG_METATITLE',
-        'CONFIG_METADESCRIPTION', 'CONFIG_METAKEYWORDS','CONFIG_URLTERMODEUSO', 'CONFIG_CODGOOGLE', 'CONFIG_API', 'CONFIG_SENHA',
-        ];
+        'CONFIG_NOMESITE', 'CONFIG_LOGOTOPO', 'CONFIG_LOGORODAPE', 'CONFIG_FAVICON', 'CONFIG_METATITLE',
+        'CONFIG_METADESCRIPTION', 'CONFIG_METAKEYWORDS', 'CONFIG_URLTERMODEUSO', 'CONFIG_CODGOOGLE', 'CONFIG_API', 'CONFIG_SENHA',
+    ];
+
     public $rules = [
         'CONFIG_NOMESITE' => 'required|max:120',
         'CONFIG_LOGOTOPO' => 'required|max:30',

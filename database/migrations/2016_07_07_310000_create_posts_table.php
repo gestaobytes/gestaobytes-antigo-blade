@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration {
 
             $table->string('POST_RETRANCA', 60)->nullable();
             $table->string('POST_TITULO', 180);
+            $table->string('POST_TITULOCHAMADA', 180);
             $table->string('POST_SUBTITULO', 256)->nullable();
             $table->string('POST_SLUG', 256);
             $table->text('POST_TEXTO');

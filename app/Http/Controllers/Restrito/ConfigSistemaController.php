@@ -52,7 +52,7 @@ class ConfigSistemaController extends StandardController {
                                     ->with('titulo', $this->titulo);
                 } else {
                     //dd('nao encontrou falhas');
-                    $path = public_path('assets/img/');
+                    $path = public_path('img/');
                     $image = Image::make($logoTopo)->encode('png');
                     $image->resize(360, 100);
                     $image->save($path . "logoTopo.png");
@@ -87,7 +87,7 @@ class ConfigSistemaController extends StandardController {
                                     ->with('titulo', $this->titulo);
                 } else {
                     //dd('nao encontrou falhas');
-                    $path = public_path('assets/img/');
+                    $path = public_path('img/');
                     $image = Image::make($logoRodape)->encode('png');
                     $image->resize(360, 100);
                     $image->save($path . "logoRodape.png");
@@ -122,7 +122,7 @@ class ConfigSistemaController extends StandardController {
                                     ->with('titulo', $this->titulo);
                 } else {
                     //dd('nao encontrou falhas');
-                    $path = public_path('assets/img/');
+                    $path = public_path('img/');
                     $image = Image::make($favicon)->encode('png');
                     $image->resize(30, 30);
                     $image->save($path . "favicon.png");

@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 
 <ol class="breadcrumb breadcrumb-arrow text-uppercase">

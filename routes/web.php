@@ -1,13 +1,10 @@
 <?php
 
-//Route::group(['prefix' => 'restrito', 'middleware' => ['web', 'auth']], function() {
-Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
+Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function () {
 
-    /* CONFIGURAÇÕES DO SITE E SEUS COMPORTAMENTOS  ******* */
+
     Route::get('configuracoes', 'Restrito\ConfigController@index');
 
-
-    /* TICKETS ***************************************** */
     Route::get('tickets', 'Restrito\TicketsController@index');
     Route::get('tickets/cadastrar', 'Restrito\TicketsController@cadastrar');
     Route::post('tickets/cadastrar', 'Restrito\TicketsController@cadastrarDB');
@@ -17,16 +14,10 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     /* MENSAGENS DOS TICKETS ***************************************** */
     Route::get('tickets/{id}/view', 'Restrito\TicketsController@view');
     Route::post('tickets/{id}/cadastrar', 'Restrito\TicketsController@cadastrarMsgDB');
-//    Route::get('tickets/{id}/deletar/{id}', 'Restrito\TicketsController@cadastrarMsgDB');
-    
-    
-    
 
-    
-    
-    
-    
-    
+
+
+
     /* EMPRESA ***************************************** */
     Route::get('empresas', 'Restrito\ConfigEmpresaController@index');
     Route::get('empresas/cadastrar', 'Restrito\ConfigEmpresaController@cadastrar');
@@ -89,7 +80,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::post('posts/reacoes/editar/{id}', 'Restrito\ManagerReacoesController@editarDB');
     Route::post('posts/reacoes/deletar/{id}', 'Restrito\ManagerReacoesController@deletar');
 
-
     /* DEPOIMENTOS DOS USUÁRIOS QUANTOS AOS SERVIÇOS DA EMPRESA *************************** */
     Route::get('depoimentos', 'Restrito\DepoimentosUsersController@index');
     Route::get('depoimentos/cadastrar', 'Restrito\DepoimentosUsersController@cadastrar');
@@ -102,9 +92,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::get('depoimentos-adm/editar/{id}', 'Restrito\DepoimentosAdmController@editar');
     Route::post('depoimentos-adm/editar/{id}', 'Restrito\DepoimentosAdmController@editarDB');
     Route::post('depoimentos-adm/deletar/{id}', 'Restrito\DepoimentosAdmController@deletar');
-    
-    
-    
 
     /* GESTÃO DE USUÁRIOS, PAPÉIS E PERMISSÕES NO SISTEMA *************************** */
     Route::get('usuarios', 'Restrito\UsuariosController@index');
@@ -140,15 +127,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::post('perfil-usuarios/deletar/{id}', 'Restrito\UsuariosRolesUsersController@deletar');
 
 
-
-
-
-
-
-
-
-
-
     /* CONTROLE DE NOTÍCIAS DO AUTOR ******************************** */
     Route::get('posts/artigos', 'Restrito\PostsArtigosController@index');
     Route::get('posts/artigos/cadastrar', 'Restrito\PostsArtigosController@cadastrar');
@@ -171,19 +149,12 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::post('videos/editar/{id}', 'Restrito\PostsVideosController@editarDB');
     Route::post('videos/deletar/{id}', 'Restrito\PostsVideosController@deletar');
 
-
-
-
-
-
     /* ==================== MEU FINANCEIRO ================================= */
     Route::get('meus-boletos', 'Restrito\MeuFinanceiroController@index');
     Route::get('meus-boletos/{id}', 'Restrito\MeuFinanceiroController@viewBoleto');
     Route::get('meus-recibos', 'Restrito\MeuFinanceiroController@recibos');
     Route::get('meus-recibos/{id}', 'Restrito\MeuFinanceiroController@viewRecibo');
     Route::get('meu-perfil/{id}', 'Restrito\MeuPerfilController@perfil');
-
-
 
 
     /* ==================== FINANCEIRO ================================= */
@@ -202,13 +173,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::get('despesas/editar/{id}', 'Restrito\FinanceiroDespesasController@editar');
     Route::post('despesas/editar/{id}', 'Restrito\FinanceiroDespesasController@editarDB');
     Route::post('despesas/deletar/{id}', 'Restrito\FinanceiroDespesasController@deletar');
-
-
-
-
-
-
-
 
     /* PROJETOS ***************************************** */
     Route::get('projetos', 'Restrito\ProjetosController@index');
@@ -243,17 +207,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::get('projetos/{cod}/bugs/editar/{id}', 'Restrito\ProjetosController@editarBugs');
     Route::post('projetos/{cod}/bugs/editar/{id}', 'Restrito\ProjetosController@editarBugsDB');
     Route::post('projetos/{cod}/bugs/deletar/{id}', 'Restrito\ProjetosController@deletarBugs');
- 
-
-
-
-
-
-
-
-
-
-
 
     /* BOLETOS - FATURAMENTO   ***************************************** */
     Route::get('receitas/boletos', 'Restrito\ReceitasController@listarBoletos');
@@ -268,19 +221,6 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::get('transparencia', 'Restrito\TransparenciaController@index');
     Route::get('transparencia/{ano}', 'Restrito\TransparenciaController@ano');
     Route::get('transparencia/{ano}/{mes}', 'Restrito\TransparenciaController@anoMes');
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* PRODUTOS E SERVICOS  ***************************************** */
     Route::get('produtos-servicos', 'Restrito\ProdutosServicosController@index');
@@ -299,70 +239,15 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function() {
     Route::post('impostos/deletar/{id}', 'Restrito\FinanceiroImpostosController@deletar');
 
 
-
-
-
-
-
-
-
-
-//Rota Inical do Dashboard
+    //Rota Inical do Dashboard
     Route::get('/', 'Restrito\RestritoController@index');
 });
 
 
 
+
+
 Auth::routes();
 
-
-/* CONTROLES DO ACESSO PÚBLICO  */
-Route::group(['prefix' => 'site'], function () {
-    Route::get('boletos/{id}', 'Site\PublicReceitasController@index');
-
-    /* é aconselhável deixar a rota pasta raiz por último */
-    Route::get('/', 'Site\SiteController@index');
-});
-
-
-
-
-
-//Route::get('/', function () {
-//    //return redirect()->action('Site\SiteController@index');
-//    return view('site._home.index');
-//});
-
-
-
-Route::get('/coluna/social', 'Site\ColunaSocialController@coluna');
-Route::get('/coluna/social/{slug}/{codigo}', 'Site\ColunaSocialController@post');
-
-Route::get('/blog/{blogs}', 'Site\BlogsController@blog');
-Route::get('/blog/{blogs}/{slug}', 'Site\BlogsController@post');
-
-Route::get('/coluna/{colunas}', 'Site\ColunasController@coluna');
-Route::get('/coluna/{colunas}/{slug}', 'Site\ColunasController@post');
-
-Route::get('/{editoria}', 'Site\SiteController@editoria');
-//Route::get('/{editoria}/{slug}', 'Site\SiteController@postEditorias');
-
-Route::get('/reacoes/{reacao}/{post}', 'Site\ReacoesController@votar');
-Route::get('/reacoes/cs/{reacao}/{post}/{id}', 'Site\ReacoesController@votarCS');
-Route::get('/tags/{tags}', 'Site\TagsController@tags');
-
-
-Route::get('/versaoimpressa/atual', 'Site\VersaoImpressaController@impresso');
-Route::get('/versaoimpressa/{edicao}', 'Site\VersaoImpressaController@versaoImpressa');
-
-
-
-//Route::resource('/flipbook','rudrarajiv\flipbooklaravel\FlipBookController');
-
-
-
+Route::get('/{blogs}/{slug}', 'Site\SiteController@articleBlog');
 Route::get('/', 'Site\SiteController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

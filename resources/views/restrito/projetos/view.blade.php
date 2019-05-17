@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 
 <ol class='breadcrumb breadcrumb-arrow text-uppercase'>
@@ -190,7 +190,7 @@
                                 @if($comentario->foto != '')
                                 <td width='50px' style='vertical-align: top;'>
                                     <a class='pull-left thumb-sm avatar'>
-                                        <img src='{{url("assets/img/users/$comentario->foto")}}' class='img-circle img-responsive'/>
+                                        <img src='{{url("img/users/$comentario->foto")}}' class='img-circle img-responsive'/>
                                     </a>
                                 </td>
                                 <td width='5px' class='text-right' style='vertical-align: top;'>

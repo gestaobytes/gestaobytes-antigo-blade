@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 <ol class='breadcrumb'>
     <li><a href='{{url('/restrito')}}'>Home</a></li>
@@ -33,19 +33,19 @@
                     <td class='p-10'>
                         <strong>LOGO TOPO</strong> <br/> 
                         @if($registro->CONFIG_LOGOTOPO!=null)
-                        <img src='{{url('/assets/img/$registro->CONFIG_LOGOTOPO')}}' class='img-responsive'  />
+                        <img src='{{url('/img/$registro->CONFIG_LOGOTOPO')}}' class='img-responsive'  />
                         @endif
                     </td>
                     <td class='p-10'>
                         <strong>LOGO RODAPÉ</strong> <br/> 
                         @if($registro->CONFIG_LOGORODAPE!=null)
-                        <img src='{{url('/assets/img/$registro->CONFIG_LOGORODAPE')}}' class='img-responsive'  />
+                        <img src='{{url('/img/$registro->CONFIG_LOGORODAPE')}}' class='img-responsive'  />
                         @endif
                     </td>
                     <td class='p-10'>
                         <strong>FAVICON</strong> <br/> 
                         @if($registro->CONFIG_FAVICON!=null)
-                        <img src='{{url('/assets/img/$registro->CONFIG_FAVICON')}}' />
+                        <img src='{{url('/img/$registro->CONFIG_FAVICON')}}' />
                         @endif
                     </td>
                 </tr>

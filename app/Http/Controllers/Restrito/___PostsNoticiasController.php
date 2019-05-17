@@ -129,8 +129,8 @@ class PostsNoticiasController extends StandardController {
                 } else {
                     $data = date('YmdHms');
                     $nomeArquivo = $data." - ".$dadosForm['POST_TITULO'];
-                    $path = public_path('assets/img/fotos/');
-                    $pathThumb = public_path('assets/img/thumbs/');
+                    $path = public_path('img/fotos/');
+                    $pathThumb = public_path('img/thumbs/');
 
                     $image = Image::make($imagem)->encode('jpg');
                     $image->resize(1200, null, function ($constraint) {
@@ -211,8 +211,8 @@ class PostsNoticiasController extends StandardController {
                 } else {
                     $data = date('YmdHms');
                     $nomeArquivo = $data." - ".$dadosForm['POST_TITULO'];
-                    $path = public_path('assets/img/fotos/');
-                    $pathThumb = public_path('assets/img/thumbs/');
+                    $path = public_path('img/fotos/');
+                    $pathThumb = public_path('img/thumbs/');
 
                     $image = Image::make($imagem)->encode('jpg');
                     $image->resize(1200, null, function ($constraint) {

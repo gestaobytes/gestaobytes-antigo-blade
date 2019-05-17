@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 
 <ol class="breadcrumb breadcrumb-arrow text-uppercase">
@@ -30,7 +30,7 @@
                     @foreach($data as $registro)
                     <tr>
                         <td>
-                            <img src='{{url("/assets/img/emoctions/$registro->REA_EMOCTION")}}' />
+                            <img src='{{url("/img/emoctions/$registro->REA_EMOCTION")}}' />
                         </td>
                         <td>{{$registro->REA_SLUG}}</td>
                         <td>{{$registro->REA_STATUS}}</td>

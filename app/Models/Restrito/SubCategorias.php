@@ -4,6 +4,7 @@ namespace App\Models\Restrito;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+// use App
 
 class SubCategorias extends Model
 {
@@ -21,8 +22,14 @@ class SubCategorias extends Model
     ];
 
 
-    public function categorias()
+    public function categoria()
     {
-        return $this->belongsTo(\App\Models\Restrito\Categorias::class, 'CAT_CODIGO');
+        return $this->belongsTo(Categorias::class, 'CAT_CODIGO');
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Posts::class, 'POST_CODIGO');
+    }
+
 }

@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 <ol class='breadcrumb text-uppercase'>
     <li><a href='{{url('/restrito')}}'>Home</a></li>

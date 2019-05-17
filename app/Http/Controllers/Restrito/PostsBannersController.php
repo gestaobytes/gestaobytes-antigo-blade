@@ -59,7 +59,7 @@ class PostsBannersController extends StandardController {
                     $final = date('YmdHms');
                     $nome = str_slug($dadosForm['BAN_NOME'], '-');
                     $nomeArquivo = $nome . "_$final";
-                    $path = public_path('assets/img/banners/');
+                    $path = public_path('img/banners/');
 
                     $extensao = $imagem->getClientOriginalExtension();
                     $image = Image::make($imagem)->encode($extensao);
@@ -130,7 +130,7 @@ class PostsBannersController extends StandardController {
                     $final = date('YmdHms');
                     $nome = str_slug($dadosForm['BAN_NOME'], '-');
                     $nomeArquivo = $nome . "_$final";
-                    $path = public_path('assets/img/banners/');
+                    $path = public_path('img/banners/');
 
                     $extensao = $imagem->getClientOriginalExtension();
                     $image = Image::make($imagem)->encode($extensao);

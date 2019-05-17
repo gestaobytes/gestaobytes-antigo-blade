@@ -50,4 +50,11 @@ class Posts extends Model {
         'POST_VIDEO' => 'max:500',
     ];
 
+
+    public function subcategoria()
+    {
+        return $this->belongsTo(SubCategorias::class, 'SUBCAT_CODIGO');
+    }
+
+
 }

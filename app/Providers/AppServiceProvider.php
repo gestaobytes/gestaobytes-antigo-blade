@@ -2,28 +2,52 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use Faker\Generator as FakerGenerator;
+use Faker\Factory as FakerFactory;
 use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+
     public function boot()
     {
+
         Schema::defaultStringLength(191);
+
+        \View::composer([
+            'layouts.frontend.site',
+            'site._home.index',
+            'site._home.blog-details'
+        ],  function ($view) {
+
+            $categoriesBlogs = DB::table('categorias')
+                ->where([['CAT_TIPO', 'B'], ['deleted_at', null]])
+                ->get();
+
+            $latestsBlogs = DB::table('posts')
+                ->where([['CAT_TIPO', 'B'], ['POST_STATUS', 'ATIVO'], ['subcategorias.deleted_at', null], ['posts.deleted_at', null]])
+                ->leftJoin('subcategorias', 'subcategorias.SUBCAT_CODIGO', 'posts.SUBCAT_CODIGO')
+                ->leftJoin('categorias', 'categorias.CAT_CODIGO', 'subcategorias.CAT_CODIGO')
+                ->orderBy('POST_CODIGO', 'desc')
+                ->limit(5)
+                ->get();
+
+
+
+
+            $view
+                // ->with('linksMunicipios', $linksMunicipios)
+                ->with('latestsBlogs', $latestsBlogs)
+                ->with('categoriesBlogs', $categoriesBlogs);
+        });
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
-        //
+        $this->app->singleton(FakerGenerator::class, function () {
+            return FakerFactory::create('pt_BR');
+        });
     }
 }

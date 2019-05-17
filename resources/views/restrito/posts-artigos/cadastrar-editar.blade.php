@@ -1,4 +1,4 @@
-@extends('layouts.restrito')
+@extends('layouts.backend.restrito')
 @section('content')
 <ol class='breadcrumb text-uppercase'>
     <li><a href='{{url('/restrito')}}'>Home</a></li>
@@ -47,10 +47,19 @@
 </div>
 <div class='row m-t-20'>
     <div class='input-field col-md-12'>
-        <label>TITULO</label>
-        {!! Form::text('POST_TITULO', null, ['required' => 'yes', 'maxlength' => '180', 'class' => 'form-control']) !!}
+        <label class='text-warning'>TITULO</label>
+        {!! Form::text('POST_TITULO', null, ['required' => 'yes', 'maxlength' => '180', 'class' => 'form-control input-warning']) !!}
         @if ($errors->has('POST_TITULO'))
         <span class='text-danger'> {{ $errors->first('POST_TITULO') }} </span>
+        @endif
+    </div>
+</div>
+<div class='row m-t-20'>
+    <div class='input-field col-md-12'>
+        <label>TITULO CHAMADA</label>
+        {!! Form::text('POST_TITULOCHAMADA', null, ['required' => 'yes', 'maxlength' => '180', 'class' => 'form-control']) !!}
+        @if ($errors->has('POST_TITULOCHAMADA'))
+        <span class='text-danger'> {{ $errors->first('POST_TITULOCHAMADA') }} </span>
         @endif
     </div>
 </div>
@@ -110,11 +119,11 @@
     <div class='input-field col-md-12'>
         <label>URL (Youtube e Vimeo)
             <a data-toggle='tooltip' data-placement='right' title='' 
-               data-original-title='Adicione somente o link da barra de endereço. É necessário adicionar o "http://" '>
+               data-original-title='Adicione somente o link da barra de endereço. É necessário adicionar o "https://" '>
                 <i class='fa fa-exclamation-circle'></i>
             </a>
         </label>
-        {!! Form::url('POST_VIDEO', null, ['required' => 'yes', 'maxlength' => '256', 'class' => 'form-control']) !!}
+        {!! Form::url('POST_VIDEO', null, ['maxlength' => '256', 'class' => 'form-control']) !!}
         @if ($errors->has('POST_VIDEO'))
         <span class='text-danger'> {{ $errors->first('POST_VIDEO') }} </span>
         @endif

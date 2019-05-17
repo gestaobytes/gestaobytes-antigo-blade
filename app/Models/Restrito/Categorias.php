@@ -26,7 +26,7 @@ class Categorias extends Model {
     ];
 
     public function subcategorias() {
-        return $this->hasMany(\App\Models\Restrito\SubCategorias::class, 'CAT_CODIGO');
+        return $this->hasMany(SubCategorias::class, 'CAT_CODIGO');
     }
 
 }

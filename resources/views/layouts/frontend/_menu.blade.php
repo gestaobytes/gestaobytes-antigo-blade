@@ -1,117 +1,203 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="{{asset('frontend/images/brand-logo.png')}}" alt="Brand Logo" class="img-fluid" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="custom-toggler-icon bar1"></span>
-            <span class="custom-toggler-icon bar2"></span>
-            <span class="custom-toggler-icon bar3"></span>
-        </button>
-        <!-- End of .navbar-toggler -->
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown not-relative">
+            <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services </a>
+            <div class="dropdown-menu dropdown-megamenu">
+                <ul class="megamenu">
+                    <li>
+                        <ul class="dropdown-submenu clearfix">
+                            <li class="submenu-heading">Design</li>
+                            <li>
+                                <a href="logo-and-branding.html">
+                                    <i class="icon-palette"></i> Logo &amp; Branding</a>
+                            </li>
+                            <li>
+                                <a href="website-design.html">
+                                    <i class="icon-laptop-phone"></i> Website Design</a>
+                            </li>
+                            <li>
+                                <a href="mobile-app-design.html">
+                                    <i class="icon-phone"></i> Mobile App Design</a>
+                            </li>
+                            <li>
+                                <a href="graphic-design.html">
+                                    <i class="icon-vector"></i> Graphic/Print Design</a>
+                            </li>
+                            <li>
+                                <a href="video-production.html">
+                                    <i class="icon-camera"></i> Video Production</a>
+                            </li>
+                        </ul>
+                        <!-- End of .dropdown-submenu -->
+                    </li>
+                    <li>
+                        <ul class="dropdown-submenu clearfix">
+                            <li class="submenu-heading">Development</li>
+                            <li>
+                                <a href="content-management-system.html">
+                                    <i class="icon-papers"></i> Content Management System</a>
+                            </li>
+                            <li>
+                                <a href="mobile-app-development.html">
+                                    <i class="icon-smartphone-embed"></i> Mobile App Development</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce.html">
+                                    <i class="icon-cart"></i> eCommerce</a>
+                            </li>
+                        </ul>
+                        <!-- End of .dropdown-submenu -->
+                    </li>
+                    <li>
+                        <ul class="dropdown-submenu clearfix">
+                            <li class="submenu-heading">Online Marketing</li>
+                            <li>
+                                <a href="search-engine-optimization.html">
+                                    <i class="icon-magnifier"></i> Search Engine Optimization</a>
+                            </li>
+                            <li>
+                                <a href="pay-per-click.html">
+                                    <i class="icon-select2"></i> Pay-Per-Click</a>
+                            </li>
+                            <li>
+                                <a href="email-marketing.html">
+                                    <i class="icon-envelope-open"></i> Email Marketing</a>
+                            </li>
+                            <li>
+                                <a href="display-marketing.html">
+                                    <i class="icon-news"></i> Display Marketing</a>
+                            </li>
+                            <li>
+                                <a href="social-media-marketing.html">
+                                    <i class="icon-share"></i> Social Media Marketing</a>
+                            </li>
+                        </ul>
+                        <!-- End of .dropdown-submenu -->
+                    </li>
+                    <li>
+                        <ul class="dropdown-submenu clearfix">
+                            <li class="submenu-heading">Business</li>
+                            <li>
+                                <a href="digital-strategy.html">
+                                    <i class="icon-chart-settings"></i> Digital Strategy</a>
+                            </li>
+                            <li>
+                                <a href="business-consulting.html">
+                                    <i class="icon-bubble-user"></i> Business Consulting</a>
+                            </li>
+                            <li>
+                                <a href="content-writing.html">
+                                    <i class="icon-register"></i> Content Writing</a>
+                            </li>
+                            <li>
+                                <a href="reporting.html">
+                                    <i class="icon-chart-growth"></i> Reporting</a>
+                            </li>
+                        </ul>
+                        <!-- End of .dropdown-submenu -->
+                    </li>
+                    <li>
+                        <ul class="dropdown-submenu clearfix">
+                            <li class="submenu-heading">Technology</li>
+                            <li>
+                                <a href="domain.html">
+                                    <i class="icon-magnifier"></i> Domain</a>
+                            </li>
+                            <li>
+                                <a href="hosting.html">
+                                    <i class="icon-server"></i> Hosting</a>
+                            </li>
+                            <li>
+                                <a href="big-data-analysis.html">
+                                    <i class="icon-pie-chart"></i> Big Data Analysis</a>
+                            </li>
+                        </ul>
+                        <!-- End of .dropdown-submenu -->
+                    </li>
+                </ul>
+            </div>
+            <!-- End of .dropdown-menu -->
+        </li>
+        <li>
+            <a href="pricing.html">Pricing</a>
+        </li>
+        <li>
+            <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+            <a href="case-studies.html">Case Studies</a>
+        </li>
+        <li class="dropdown">
+            <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu">
+                <ul class="megamenu">
+                    <li>
+                        <a href="about.html">Overview</a>
+                    </li>
+                    <li>
+                        <a href="team.html">Team</a>
+                    </li>
+                    <li>
+                        <a href="awards-and-recognitions.html">Awards &amp; Recognition</a>
+                    </li>
+                    <li>
+                        <a href="career.html">Career</a>
+                    </li>
+                    <li>
+                        <a href="customer-reviews.html">Customer Reviews</a>
+                    </li>
+                    <li>
+                        <a href="faqs.html">FAQs</a>
+                    </li>
+                </ul>
+                <!-- End of .dropdown-menu -->
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+            <div class="dropdown-menu">
+                <ul class="megamenu">
+                    <li>
+                        <a href="blog.html">Blog Version 1</a>
+                    </li>
+                    <li>
+                        <a href="blog-version-2.html">Blog Version 2</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of .dropdown-menu -->
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other</a>
+            <div class="dropdown-menu">
+                <ul class="megamenu">
+                    <li>
+                        <a href="404-error.html">404 Error Page</a>
+                    </li>
+                    <li>
+                        <a href="search-results.html">Search Results</a>
+                    </li>
+                    <li>
+                        <a href="under-construction.html">Under Construction</a>
+                    </li>
+                    <li>
+                        <a href="terms-conditions.html">Terms &amp; Conditions</a>
+                    </li>
+                    <li>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of .dropdown-menu -->
+        </li>
+        <li class="menu-btn" data-toggle="modal" data-target="#getAQuoteModal">
+            <a class="btn btn-fill" href="#">GET A QUOTE
+                <span class="icon-chevron-right"></span>
+            </a>
+        </li>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-md-auto typo-color-c align-items-center">
-                <li class="nav-item dropdown dropdown__megamenu">
-                    <a class="nav-link dropdown-opener" href="#">
-                        Services
-                    </a>
-
-                    <div class="custom-dropdown-menu custom-megamenu">
-                        <div class="container">
-                            <ul class="megamenu">
-                                <li>
-                                    <a href="javascript:void(0)">Design</a>
-                                    <ul class="dropdown-submenu">
-                                        <li><a href="logo-and-branding.html" class="dropdown-item">Logo & Branding</a></li>
-                                        <li><a href="website-design.html" class="dropdown-item">Website Design</a></li>
-                                        <li><a href="mobile-app-design.html" class="dropdown-item">Mobile App
-                                                Design</a></li>
-                                        <li><a href="graphic-design.html" class="dropdown-item">Graphic/Print
-                                                Design</a></li>
-                                        <li><a href="video-production.html" class="dropdown-item">Video Production</a></li>
-                                    </ul>
-                                    <!-- End of .dropdown-submenu -->
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Development</a>
-                                    <ul class="dropdown-submenu">
-                                        <li><a href="content-management-system.html" class="dropdown-item">Content
-                                                Management System</a></li>
-                                        <li><a href="mobile-app-development.html" class="dropdown-item">Mobile App
-                                                Development</a></li>
-                                        <li><a href="ecommerce.html" class="dropdown-item">eCommerce</a></li>
-                                    </ul>
-                                    <!-- End of .dropdown-submenu -->
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Online marketing</a>
-                                    <ul class="dropdown-submenu">
-                                        <li><a href="search-engine-optimization.html" class="dropdown-item">Search
-                                                Engine Optimization</a></li>
-                                        <li><a href="pay-per-click.html" class="dropdown-item">Pay-Per-Click</a></li>
-                                        <li><a href="email-marketing.html" class="dropdown-item">Email Marketing</a></li>
-                                        <li><a href="display-marketing.html" class="dropdown-item">Display
-                                                Marketing</a></li>
-                                        <li><a href="social-media-marketing.html" class="dropdown-item">Social
-                                                Media Marketing</a></li>
-                                    </ul>
-                                    <!-- End of .dropdown-submenu -->
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Business</a>
-                                    <ul class="dropdown-submenu">
-                                        <li><a href="digital-strategy.html" class="dropdown-item">Digital Strategy</a></li>
-                                        <li><a href="business-consulting.html" class="dropdown-item">Business
-                                                Consulting</a></li>
-                                        <li><a href="content-writing.html" class="dropdown-item">Content Writing</a></li>
-                                        <li><a href="reporting.html" class="dropdown-item">Reporting</a></li>
-                                    </ul>
-                                    <!-- End of .dropdown-submenu -->
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Technology</a>
-                                    <ul class="dropdown-submenu">
-                                        <li><a href="hosting.html" class="dropdown-item">Hosting</a></li>
-                                        <li><a href="big-data-analysis.html" class="dropdown-item">Big Data
-                                                Analysis</a></li>
-                                    </ul>
-                                    <!-- End of .dropdown-submenu -->
-                                </li>
-                            </ul>
-                            <!-- End of .custom-megamenu -->
-                        </div>
-                        <!-- End of .container -->
-                    </div>
-                    <!-- End of .custom-megamenu -->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pricing.html">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="case-studies.html">Case Studies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="team.html">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-btn btn-mid grad-style-cd" href="contact.html" data-toggle="modal" data-target="#get-a-quote-modal">GET A QUOTE</a>
-                </li>
-            </ul>
-            <!-- End of .navbar-nav -->
-        </div>
-        <!-- End of .navbar-collapse -->
-    </div>
-    <!-- End of .container -->
-</nav>
-<!-- End of .navbar -->
+    </ul>
+</div>

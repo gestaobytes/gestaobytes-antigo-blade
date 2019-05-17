@@ -41,6 +41,9 @@ class SiteController extends StandardControllerPublic
             ->limit(5)
             ->get();
 
+        
+
+
         return view('site._home.index', compact('blogs'));
     }
 
@@ -61,8 +64,7 @@ class SiteController extends StandardControllerPublic
             ->limit(1)
             ->get();
 
-
-        return view('site._home.blog-details', compact('postBlogs'));
+            return view('site._home.blog-details', compact('postBlogs'));
     }
 
 

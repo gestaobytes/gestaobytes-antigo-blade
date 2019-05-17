@@ -22,8 +22,10 @@ class AppServiceProvider extends ServiceProvider
             'site._home.blog-details'
         ],  function ($view) {
 
-            $categoriesBlogs = DB::table('categorias')
-                ->where([['CAT_TIPO', 'B'], ['deleted_at', null]])
+            $categoriesBlogs = DB::table('subcategorias')
+                ->where([['CAT_TIPO', 'B'], ['subcategorias.deleted_at', null] ])
+                ->leftJoin('categorias', 'categorias.CAT_CODIGO', 'subcategorias.CAT_CODIGO')
+                ->select('SUBCAT_CODIGO','SUBCAT_TITULO','SUBCAT_SLUG')
                 ->get();
 
             $latestsBlogs = DB::table('posts')

@@ -34,4 +34,3 @@
             @include('layouts.frontend._menu')
         </nav>
     </div>
-</div>

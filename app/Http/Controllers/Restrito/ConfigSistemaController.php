@@ -109,7 +109,7 @@ class ConfigSistemaController extends StandardController {
 
         if (isset($favicon) && $favicon != null) {
             if ($favicon->isValid()) {
-                $regras = ['CONFIG_FAVICON' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['CONFIG_FAVICON' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $faviconArray = array('CONFIG_FAVICON' => $favicon);
                 $validator = validator($faviconArray, $regras);
 

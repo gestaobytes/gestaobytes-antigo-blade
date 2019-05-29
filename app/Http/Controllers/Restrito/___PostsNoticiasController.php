@@ -115,7 +115,7 @@ class PostsNoticiasController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['POST_IMAGE' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['POST_IMAGE' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('POST_IMAGE' => $imagem);
                 $validator = validator($imagemArray, $regras);
 
@@ -197,7 +197,7 @@ class PostsNoticiasController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['POST_IMAGE' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['POST_IMAGE' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('POST_IMAGE' => $imagem);
                 $validator = validator($imagemArray, $regras);
 

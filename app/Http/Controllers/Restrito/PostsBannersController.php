@@ -43,7 +43,7 @@ class PostsBannersController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['BAN_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['BAN_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('BAN_IMAGEM' => $imagem);
                 $validator = validator($imagemArray, $regras);
 
@@ -114,7 +114,7 @@ class PostsBannersController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['BAN_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['BAN_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('BAN_IMAGEM' => $imagem);
                 $validator = validator($imagemArray, $regras);
 

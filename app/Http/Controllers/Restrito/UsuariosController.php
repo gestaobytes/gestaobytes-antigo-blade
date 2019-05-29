@@ -68,7 +68,7 @@ class UsuariosController extends StandardController {
         $imagem = $this->request->file('foto');
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
-                $regras = ['foto' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['foto' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('foto' => $imagem);
                 $validator = validator($imagemArray, $regras);
 
@@ -164,7 +164,7 @@ class UsuariosController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['foto' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['foto' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('foto' => $imagem);
                 $validator = validator($imagemArray, $regras);
 

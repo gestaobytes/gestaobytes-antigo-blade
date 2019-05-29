@@ -249,5 +249,19 @@ Route::group(['prefix' => 'restrito', 'middleware' => ['auth']], function () {
 
 Auth::routes();
 
-Route::get('/{blogs}/{slug}', 'Site\SiteController@articleBlog');
+Route::group(['domain' => 'blogs.gestaobytes.local'], function () {
+    Route::get('/', 'Site\SiteController@blogs'); 
+    Route::get('/{blog}', 'Site\SiteController@categoryBlog');
+    Route::get('/{blog}/{slug}', 'Site\SiteController@articleBlog');
+});
+
+
+// Route::domain('{blogs}.gestaobytes.local')->group(function () {
+    
+//     // Route::get('/', 'Site\SiteController@blogs');
+//     Route::get('/', 'Site\SiteController@blogs');
+// });
+
+
+
 Route::get('/', 'Site\SiteController@index');

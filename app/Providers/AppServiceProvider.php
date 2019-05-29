@@ -16,11 +16,16 @@ class AppServiceProvider extends ServiceProvider
 
         Schema::defaultStringLength(191);
 
+
+        
         \View::composer([
             'layouts.frontend.site',
             'site._home.index',
+            'site._home.blogs-list',
             'site._home.blog-details'
         ],  function ($view) {
+
+            $urlBlogs = "http://blogs.gestaobytes.local";
 
             $categoriesBlogs = DB::table('subcategorias')
                 ->where([['CAT_TIPO', 'B'], ['subcategorias.deleted_at', null] ])
@@ -36,11 +41,21 @@ class AppServiceProvider extends ServiceProvider
                 ->limit(5)
                 ->get();
 
+            $latestsNews = DB::table('posts')
+                ->where([['CAT_TIPO', 'B'], ['POST_STATUS', 'ATIVO'], ['subcategorias.deleted_at', null], ['posts.deleted_at', null], ['POST_IMAGE', '<>', '']])
+                ->leftJoin('subcategorias', 'subcategorias.SUBCAT_CODIGO', 'posts.SUBCAT_CODIGO')
+                ->leftJoin('categorias', 'categorias.CAT_CODIGO', 'subcategorias.CAT_CODIGO')
+                ->orderBy('POST_CODIGO', 'desc')
+                ->limit(3)
+                ->get();
+
 
 
 
             $view
                 // ->with('linksMunicipios', $linksMunicipios)
+                ->with('urlBlogs', $urlBlogs)
+                ->with('latestsNews', $latestsNews)
                 ->with('latestsBlogs', $latestsBlogs)
                 ->with('categoriesBlogs', $categoriesBlogs);
         });

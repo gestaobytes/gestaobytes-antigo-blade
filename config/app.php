@@ -45,6 +45,7 @@ return [
       |
      */
     'url' => env('APP_URL', 'http://localhost'),
+    'blog' => env('APP_URLBLOG', 'http://blogs.gestaobytes.local'),
     /*
       |--------------------------------------------------------------------------
       | Application Timezone

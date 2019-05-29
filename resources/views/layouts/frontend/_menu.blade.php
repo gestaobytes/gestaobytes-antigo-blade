@@ -118,9 +118,7 @@
             </div>
             <!-- End of .dropdown-menu -->
         </li>
-        <li>
-            <a href="pricing.html">Pricing</a>
-        </li>
+       
         <li>
             <a href="portfolio.html">Portfolio</a>
         </li>
@@ -153,23 +151,11 @@
                 <!-- End of .dropdown-menu -->
             </div>
         </li>
-        <li class="dropdown">
-            <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-            <div class="dropdown-menu">
-                <ul class="megamenu">
-                    <li>
-                        <a href="blog.html">Blog Version 1</a>
-                    </li>
-                    <li>
-                        <a href="blog-version-2.html">Blog Version 2</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- End of .dropdown-menu -->
-        </li>
         <li>
-            <a href="contact.html">Contact</a>
+            <a href="{{$urlBlogs}}">Blog</a>
         </li>
+       
+       
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other</a>
             <div class="dropdown-menu">

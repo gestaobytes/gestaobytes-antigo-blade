@@ -68,7 +68,7 @@ class PostsColunaSocialController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['CS_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['CS_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('CS_IMAGEM' => $imagem);
                 $validator = validator($imagemArray, $regras);
                 
@@ -162,7 +162,7 @@ class PostsColunaSocialController extends StandardController {
         if (isset($imagem) && $imagem != null) {
             if ($imagem->isValid()) {
 
-                $regras = ['CS_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:1024'];
+                $regras = ['CS_IMAGEM' => 'image|mimes:jpg,jpeg,png,bmp,gif|max:5024'];
                 $imagemArray = array('CS_IMAGEM' => $imagem);
                 $validator = validator($imagemArray, $regras);
 

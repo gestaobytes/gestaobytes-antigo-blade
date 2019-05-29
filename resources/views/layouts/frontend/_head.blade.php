@@ -15,22 +15,21 @@
     <link rel="apple-touch-icon" sizes="114x114" href="{{asset("frontend/icon/apple-touch-icon-114x114.png")}}"/>
 
     <link rel="stylesheet" href="{{asset("frontend/css/bootstrap.min.css")}}"/>
-    <!-- ++++ owl carousel ++++ -->
     <link rel="stylesheet" href="{{asset("frontend/css/owl.carousel.min.css")}}" type="text/css"/>
     <link rel="stylesheet" href="{{asset("frontend/css/owl.theme.default.min.css")}}" type="text/css"/>
-    <!-- ++++ magnific-popup  ++++ -->
     <link rel="stylesheet" href="{{asset("frontend/css/magnific-popup.css")}}"/>
-    <!-- ++++ font Icon ++++ -->
     <link rel="stylesheet" href="{{asset("frontend/css/font-awesome.min.css")}}"/>
     <link rel="stylesheet" href="{{asset("frontend/css/font-awesome.min.css")}}"/>
     <link rel="stylesheet" href="{{asset("frontend/css/fonts.css")}}"/>
-    <!-- Slider Revolution CSS Files -->
+    <link rel="stylesheet" href="{{asset("frontend/css/flaticon.css")}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset("frontend/revolution/css/settings.css")}}"/>
-    <!-- ++++ style ++++ -->
     <link rel="stylesheet" href="{{asset("frontend/css/style.css")}}"/>
-    <!-- responsive css -->
     <link rel="stylesheet" href="{{asset("frontend/css/responsive.css")}}"/>
     <!-- [if IE]>
         <script src="{{asset("frontend/js/html5shiv.js")}}"></script>
     <![endif]  -->
+
+
+
+
 </head>

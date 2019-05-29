@@ -90,7 +90,6 @@
         font-size: 8px;
     }
     .main-menu .navbar-brand>img {
-        max-width: 116px;
         margin: 6px 0;
         max-height: 40px;
     }
@@ -420,7 +419,7 @@
     .main-menu .navbar-nav>li>a:hover,
     .main-menu .navbar-nav>li.active>a {
         border-color: transparent;
-        color: #90c404;
+        color: #02646e;
         background: transparent;
     }
     .main-menu .navbar-nav>li>a {
@@ -442,7 +441,7 @@
         margin-bottom: 18px;
     }
     .main-menu .navbar-brand>img {
-        max-width: 142px;
+        /* max-width: 142px; */
         margin: 6px 0;
         max-height: 40px;
     }
@@ -510,8 +509,8 @@
     .main-menu .btn.btn-fill:hover,
     .main-menu .btn.btn-fill:focus {
         background: transparent;
-        color: #90c404;
-        border-color: #90c404;
+        color: #02646e;
+        border-color: #02646e;
     }
     .tp-parallax-wrap.tp-parallax-container {
         left: 20px;
